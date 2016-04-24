@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asmv1:assemblyIdentity name="cipp.exe" version="1.0.0.0" publicKeyToken="4f259df82bca3010" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="cipp" version="0.0.0.2" language="neutral" processorArchitecture="msil" />
+    <commandLine file="cipp.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="4" minorVersion="10" buildNumber="0" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="cipp.exe" size="36864">
+      <assemblyIdentity name="cipp" version="0.0.0.2" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>EBgXppFgtZ0yY78T4IX5/+4K/Ro=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=兔子窝\yjf" issuerKeyHash="09284ffd392185e43b9df6fd2330395868cd4711" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>YXUdCLFPemZFGJvJVCAqqL9d14Q=</DigestValue></Reference></SignedInfo><SignatureValue>IhiwVA7OsUgGNVLs/GpTQhhRbrFf9vO94cvcktWhjFvYYiEllIKt7iWt/XaKhzVpT4PrYkdr+A1O8kpDrW0iw2qWgH1nGXdrwB2soJ7rqGL+pTJR+ZkH8+3TlfaoNBSiwFgC6WZ0rdAQxwXi2A26kytUEc3muMlYrBbnfrDHElQ=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ub+JU92gSE1T37ZmFbLasHRkYcBFztsosPshDFrbUGmtiD1gAJ0gs7uvxNbLv8MgV6gD7DDUh86pqB0fakzAMqb7/hiFzURl2TAX4kHyZC61I+tFuHF1zsR68zjebYIuryazgqQ3Eh9GA3J5Ic0fzhNzwQJru3XjIcEIuIsutRE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="84d75dbfa82a2054c99b1845667a4fb1081d7561" Description="" Url=""><as:assemblyIdentity name="cipp.exe" version="1.0.0.0" publicKeyToken="4f259df82bca3010" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=兔子窝\yjf</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>9qQQRqOCpMVLSqaq3D8DFLG+iB8=</DigestValue></Reference></SignedInfo><SignatureValue>anY41p6w4wvTEsQgLymJMhLKmkUOyJ4IDRG/c+fpmrpq5oSKQLxgWIT04JAJ8Ze8XljbM3BcJZmD3o9VXQYLWyiFOvXo+l5CusLOT4gyUR7TZ7RaTeE/iubanLeonXmI7qH8HWoGA0bngP5bXaf68umiD+lhbtA0YJsnb0ngtx8=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ub+JU92gSE1T37ZmFbLasHRkYcBFztsosPshDFrbUGmtiD1gAJ0gs7uvxNbLv8MgV6gD7DDUh86pqB0fakzAMqb7/hiFzURl2TAX4kHyZC61I+tFuHF1zsR68zjebYIuryazgqQ3Eh9GA3J5Ic0fzhNzwQJru3XjIcEIuIsutRE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBrTCCARqgAwIBAgIQNCBTNfYNpLNPXII1dYIa8DAJBgUrDgMCHQUAMBkxFzAVBgNVBAMeDlFUW1B6nQBcAHkAagBmMB4XDTA3MTEwOTA5NDUwNVoXDTA4MTEwODE1NDUwNVowGTEXMBUGA1UEAx4OUVRbUHqdAFwAeQBqAGYwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALm/iVPdoEhNU9+2ZhWy2rB0ZGHARc7bKLD7IQxa21BprYg9YACdILO7r8TWy7/DIFeoA+ww1IfOqagdH2pMwDKm+/4Yhc1EZdkwF+JB8mQutSPrRbhxdc7EevM43m2CLq8ms4KkNxIfRgNyeSHNH84Tc8ECa7t14yHBCLiLLrURAgMBAAEwCQYFKw4DAh0FAAOBgQA8mYOYsDl1On+tMq0Gxhj69UCwzGtuxDl/YpFs1+JqjGOALw96F6n/oxgX0/MPy386N0LNKD74x/3TqUSIN2W1GOUuu7OLjqUGQzDj8ouzKG81QqrrSTUiyfHkP8gnJIcVELWsSR1rGIrs/p9SpKN3zwiC2X9kRQ3XiQNFj4ox2w==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -1,0 +1,8 @@
+C:\Users\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\bin\Release\cipp.exe.config
+C:\Users\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.exe
+C:\Users\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.xml
+C:\Users\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.pdb
+D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\bin\Release\cipp.exe.config
+D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.exe
+D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.xml
+D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.pdb
