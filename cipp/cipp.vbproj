@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -14,14 +14,15 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <ManifestCertificateThumbprint>68C66661CA59C72A49C43BE249990ACF2AEC6BC2</ManifestCertificateThumbprint>
     <ManifestKeyFile>cipp_TemporaryKey.pfx</ManifestKeyFile>
-    <GenerateManifests>true</GenerateManifests>
-    <SignManifests>true</SignManifests>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <GenerateManifests>false</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile />
     <PublishUrl>D:\yjfyy\桌面\a\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -45,6 +46,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DocumentationFile>cipp.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -54,6 +56,14 @@
     <OutputPath>bin\Release\</OutputPath>
     <DocumentationFile>cipp.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -127,6 +137,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="cipp_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -19,19 +19,19 @@ Partial Class Form1
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.bnetdn = New System.Windows.Forms.TextBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.pvpgndir = New System.Windows.Forms.TextBox
-        Me.ServiceController1 = New System.ServiceProcess.ServiceController
+        Me.components = New System.ComponentModel.Container()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.bnetdn = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.pvpgndir = New System.Windows.Forms.TextBox()
+        Me.ServiceController1 = New System.ServiceProcess.ServiceController()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.emod = New System.Windows.Forms.CheckBox
-        Me.help = New System.Windows.Forms.Button
-        Me.about = New System.Windows.Forms.Button
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.emod = New System.Windows.Forms.CheckBox()
+        Me.help = New System.Windows.Forms.Button()
+        Me.about = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -82,7 +82,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.Location = New System.Drawing.Point(31, 199)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(228, 43)

@@ -1,4 +1,5 @@
-﻿Imports System
+﻿Imports System.Resources
+Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -8,17 +9,17 @@ Imports System.Runtime.InteropServices
 
 ' 查看程序集属性的值
 
-<Assembly: AssemblyTitle("cipp")> 
-<Assembly: AssemblyDescription("动态ip pvpgn自动配置程序")> 
-<Assembly: AssemblyCompany("yjf")> 
-<Assembly: AssemblyProduct("cipp")> 
-<Assembly: AssemblyCopyright("版权所有 (C) 夜宇 2007")> 
-<Assembly: AssemblyTrademark("yjfyy.spaces.live.com")> 
+<Assembly: AssemblyTitle("cipp")>
+<Assembly: AssemblyDescription("动态ip pvpgn自动配置程序")>
+<Assembly: AssemblyCompany("yjf")>
+<Assembly: AssemblyProduct("cipp")>
+<Assembly: AssemblyCopyright("版权所有 (C) 夜宇 2007")>
+<Assembly: AssemblyTrademark("yjfyy.spaces.live.com")>
 
 <Assembly: ComVisible(False)>
 
 '如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-<Assembly: Guid("460cb97e-85b9-49b2-b26b-b22609e6c58a")> 
+<Assembly: Guid("460cb97e-85b9-49b2-b26b-b22609e6c58a")>
 
 ' 程序集的版本信息由下面四个值组成:
 '
@@ -31,5 +32,6 @@ Imports System.Runtime.InteropServices
 ' 方法是按如下所示使用“*”:
 ' <Assembly: AssemblyVersion("1.0.*")> 
 
-<Assembly: AssemblyVersion("0.0.0.3")> 
-<Assembly: AssemblyFileVersion("0.0.0.3")> 
+<Assembly: AssemblyVersion("0.0.0.3")>
+<Assembly: AssemblyFileVersion("0.0.0.3")>
+<Assembly: NeutralResourcesLanguage("zh-CN")>

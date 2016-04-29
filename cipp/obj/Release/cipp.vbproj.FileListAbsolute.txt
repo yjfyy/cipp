@@ -6,3 +6,19 @@ D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\bin\Release\cipp.exe.con
 D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.exe
 D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.xml
 D:\TuZi\Documents\Visual Studio 2005\Projects\cipp\cipp\obj\Release\cipp.pdb
+D:\cipp\cipp\bin\Release\cipp.exe.config
+D:\cipp\cipp\obj\Release\cipp.exe
+D:\cipp\cipp\obj\Release\cipp.xml
+D:\cipp\cipp\obj\Release\cipp.pdb
+D:\cipp\cipp\obj\Release\cipp.vbprojResolveAssemblyReference.cache
+D:\cipp\cipp\obj\Release\cipp.AboutBox1.resources
+D:\cipp\cipp\obj\Release\cipp.Form1.resources
+D:\cipp\cipp\obj\Release\cipp.Resources.resources
+D:\cipp\cipp\obj\Release\cipp.vbproj.GenerateResource.Cache
+D:\cipp\cipp\bin\Release\Form1.resx
+D:\cipp\cipp\bin\Release\Form1.vb
+D:\cipp\cipp\bin\Release\Form1.Designer.vb
+D:\cipp\cipp\bin\Release\restpvpgn.bat
+D:\cipp\cipp\bin\Release\cipp.exe
+D:\cipp\cipp\bin\Release\cipp.pdb
+D:\cipp\cipp\bin\Release\cipp.xml
