@@ -25,16 +25,13 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.bentdn = New System.Windows.Forms.TextBox()
-        Me.pvpgndir = New System.Windows.Forms.TextBox()
-        Me.checkbox_edit_conf = New System.Windows.Forms.CheckBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.textbox_bnet_domain_name = New System.Windows.Forms.TextBox()
+        Me.textbox_pvpgn_directory = New System.Windows.Forms.TextBox()
+        Me.checkbox_modify_conf = New System.Windows.Forms.CheckBox()
+        Me.Button_save_or_uninstall = New System.Windows.Forms.Button()
+        Me.Button_help = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -55,101 +52,73 @@ Partial Class Form1
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "PVPGN安装目录："
         '
-        'bentdn
+        'textbox_bnet_domain_name
         '
-        Me.bentdn.Location = New System.Drawing.Point(107, 12)
-        Me.bentdn.Name = "bentdn"
-        Me.bentdn.Size = New System.Drawing.Size(100, 21)
-        Me.bentdn.TabIndex = 2
+        Me.textbox_bnet_domain_name.Location = New System.Drawing.Point(107, 12)
+        Me.textbox_bnet_domain_name.Name = "textbox_bnet_domain_name"
+        Me.textbox_bnet_domain_name.Size = New System.Drawing.Size(100, 21)
+        Me.textbox_bnet_domain_name.TabIndex = 2
         '
-        'pvpgndir
+        'textbox_pvpgn_directory
         '
-        Me.pvpgndir.Location = New System.Drawing.Point(107, 39)
-        Me.pvpgndir.Name = "pvpgndir"
-        Me.pvpgndir.Size = New System.Drawing.Size(100, 21)
-        Me.pvpgndir.TabIndex = 3
+        Me.textbox_pvpgn_directory.Location = New System.Drawing.Point(107, 39)
+        Me.textbox_pvpgn_directory.Name = "textbox_pvpgn_directory"
+        Me.textbox_pvpgn_directory.Size = New System.Drawing.Size(100, 21)
+        Me.textbox_pvpgn_directory.TabIndex = 3
         '
-        'checkbox_edit_conf
+        'checkbox_modify_conf
         '
-        Me.checkbox_edit_conf.AutoSize = True
-        Me.checkbox_edit_conf.Location = New System.Drawing.Point(14, 66)
-        Me.checkbox_edit_conf.Name = "checkbox_edit_conf"
-        Me.checkbox_edit_conf.Size = New System.Drawing.Size(108, 16)
-        Me.checkbox_edit_conf.TabIndex = 4
-        Me.checkbox_edit_conf.Text = "不修改CONF文件"
-        Me.checkbox_edit_conf.UseVisualStyleBackColor = True
+        Me.checkbox_modify_conf.AutoSize = True
+        Me.checkbox_modify_conf.Location = New System.Drawing.Point(14, 66)
+        Me.checkbox_modify_conf.Name = "checkbox_modify_conf"
+        Me.checkbox_modify_conf.Size = New System.Drawing.Size(192, 16)
+        Me.checkbox_modify_conf.TabIndex = 4
+        Me.checkbox_modify_conf.Text = "修改CONF文件（直接拨号方式）"
+        Me.checkbox_modify_conf.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Button_save_or_uninstall
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 88)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button_save_or_uninstall.Location = New System.Drawing.Point(61, 88)
+        Me.Button_save_or_uninstall.Name = "Button_save_or_uninstall"
+        Me.Button_save_or_uninstall.Size = New System.Drawing.Size(125, 23)
+        Me.Button_save_or_uninstall.TabIndex = 5
+        Me.Button_save_or_uninstall.Text = "保存设置或卸载程序"
+        Me.Button_save_or_uninstall.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Button_help
         '
-        Me.Button2.Location = New System.Drawing.Point(93, 88)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(93, 117)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(12, 117)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button_help.Location = New System.Drawing.Point(86, 117)
+        Me.Button_help.Name = "Button_help"
+        Me.Button_help.Size = New System.Drawing.Size(75, 23)
+        Me.Button_help.TabIndex = 1
+        Me.Button_help.Text = "帮助"
+        Me.Button_help.UseVisualStyleBackColor = True
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 159)
+        Me.Label3.AutoEllipsis = True
+        Me.Label3.Location = New System.Drawing.Point(12, 145)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(41, 12)
-        Me.Label3.TabIndex = 9
+        Me.Label3.Size = New System.Drawing.Size(223, 50)
+        Me.Label3.TabIndex = 7
         Me.Label3.Text = "Label3"
         '
         'Timer1
         '
-        '
-        'Button5
-        '
-        Me.Button5.Location = New System.Drawing.Point(73, 154)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 10
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 180000
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(247, 180)
-        Me.Controls.Add(Me.Button5)
+        Me.ClientSize = New System.Drawing.Size(247, 204)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.checkbox_edit_conf)
-        Me.Controls.Add(Me.pvpgndir)
-        Me.Controls.Add(Me.bentdn)
+        Me.Controls.Add(Me.Button_help)
+        Me.Controls.Add(Me.Button_save_or_uninstall)
+        Me.Controls.Add(Me.checkbox_modify_conf)
+        Me.Controls.Add(Me.textbox_pvpgn_directory)
+        Me.Controls.Add(Me.textbox_bnet_domain_name)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
@@ -161,14 +130,11 @@ Partial Class Form1
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents bentdn As TextBox
-    Friend WithEvents pvpgndir As TextBox
-    Friend WithEvents checkbox_edit_conf As CheckBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
+    Friend WithEvents textbox_bnet_domain_name As TextBox
+    Friend WithEvents textbox_pvpgn_directory As TextBox
+    Friend WithEvents checkbox_modify_conf As CheckBox
+    Friend WithEvents Button_save_or_uninstall As Button
+    Friend WithEvents Button_help As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Button5 As Button
 End Class
