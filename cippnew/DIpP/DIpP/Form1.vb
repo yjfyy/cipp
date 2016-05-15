@@ -12,7 +12,7 @@
         '获得动态域名ip地址赋值到oldip
         'OldIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
         '测试调用
-        ' cipprun()
+        cipprun()
         'modify_conf()
 
     End Sub
@@ -44,12 +44,12 @@
         If RadioButton_ip_file.Checked Then
             Dim dFile As New System.Net.WebClient
             Try
-                NewIp = dFile.DownloadString(TextBox_ip_file.Text)
+                '获取新ip，vbcrlf是去掉回车换行
+                NewIp = dFile.DownloadString(TextBox_ip_file.Text).Replace(vbCrLf, "")
             Catch ex As Exception
 
             End Try
 
-        Else
             Try
                 NewIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
             Catch ex As Exception
@@ -189,7 +189,6 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-
         Shell("up_ip_com.bat", AppWinStyle.Hide, True)
         cipprun()
     End Sub
