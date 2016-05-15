@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.textbox_bnet_domain_name = New System.Windows.Forms.TextBox()
         Me.textbox_pvpgn_directory = New System.Windows.Forms.TextBox()
@@ -32,21 +31,17 @@ Partial Class Form1
         Me.Button_help = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox_ip_file = New System.Windows.Forms.TextBox()
+        Me.RadioButton_domain = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_ip_file = New System.Windows.Forms.RadioButton()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(89, 12)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "战网动态域名："
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 42)
+        Me.Label2.Location = New System.Drawing.Point(78, 98)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(95, 12)
         Me.Label2.TabIndex = 1
@@ -54,14 +49,14 @@ Partial Class Form1
         '
         'textbox_bnet_domain_name
         '
-        Me.textbox_bnet_domain_name.Location = New System.Drawing.Point(107, 12)
+        Me.textbox_bnet_domain_name.Location = New System.Drawing.Point(83, 15)
         Me.textbox_bnet_domain_name.Name = "textbox_bnet_domain_name"
-        Me.textbox_bnet_domain_name.Size = New System.Drawing.Size(100, 21)
+        Me.textbox_bnet_domain_name.Size = New System.Drawing.Size(245, 21)
         Me.textbox_bnet_domain_name.TabIndex = 2
         '
         'textbox_pvpgn_directory
         '
-        Me.textbox_pvpgn_directory.Location = New System.Drawing.Point(107, 39)
+        Me.textbox_pvpgn_directory.Location = New System.Drawing.Point(179, 89)
         Me.textbox_pvpgn_directory.Name = "textbox_pvpgn_directory"
         Me.textbox_pvpgn_directory.Size = New System.Drawing.Size(100, 21)
         Me.textbox_pvpgn_directory.TabIndex = 3
@@ -69,7 +64,7 @@ Partial Class Form1
         'checkbox_modify_conf
         '
         Me.checkbox_modify_conf.AutoSize = True
-        Me.checkbox_modify_conf.Location = New System.Drawing.Point(14, 66)
+        Me.checkbox_modify_conf.Location = New System.Drawing.Point(82, 116)
         Me.checkbox_modify_conf.Name = "checkbox_modify_conf"
         Me.checkbox_modify_conf.Size = New System.Drawing.Size(192, 16)
         Me.checkbox_modify_conf.TabIndex = 4
@@ -78,7 +73,7 @@ Partial Class Form1
         '
         'Button_save_or_uninstall
         '
-        Me.Button_save_or_uninstall.Location = New System.Drawing.Point(61, 88)
+        Me.Button_save_or_uninstall.Location = New System.Drawing.Point(116, 138)
         Me.Button_save_or_uninstall.Name = "Button_save_or_uninstall"
         Me.Button_save_or_uninstall.Size = New System.Drawing.Size(125, 23)
         Me.Button_save_or_uninstall.TabIndex = 5
@@ -87,7 +82,7 @@ Partial Class Form1
         '
         'Button_help
         '
-        Me.Button_help.Location = New System.Drawing.Point(86, 117)
+        Me.Button_help.Location = New System.Drawing.Point(141, 167)
         Me.Button_help.Name = "Button_help"
         Me.Button_help.Size = New System.Drawing.Size(75, 23)
         Me.Button_help.TabIndex = 1
@@ -97,9 +92,9 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoEllipsis = True
-        Me.Label3.Location = New System.Drawing.Point(12, 145)
+        Me.Label3.Location = New System.Drawing.Point(16, 195)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(223, 50)
+        Me.Label3.Size = New System.Drawing.Size(330, 50)
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Label3"
         '
@@ -108,27 +103,68 @@ Partial Class Form1
         Me.Timer1.Enabled = True
         Me.Timer1.Interval = 180000
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.RadioButton_ip_file)
+        Me.GroupBox1.Controls.Add(Me.RadioButton_domain)
+        Me.GroupBox1.Controls.Add(Me.TextBox_ip_file)
+        Me.GroupBox1.Controls.Add(Me.textbox_bnet_domain_name)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(334, 70)
+        Me.GroupBox1.TabIndex = 8
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "获取IP方式"
+        '
+        'TextBox_ip_file
+        '
+        Me.TextBox_ip_file.Location = New System.Drawing.Point(83, 37)
+        Me.TextBox_ip_file.Name = "TextBox_ip_file"
+        Me.TextBox_ip_file.Size = New System.Drawing.Size(245, 21)
+        Me.TextBox_ip_file.TabIndex = 3
+        '
+        'RadioButton_domain
+        '
+        Me.RadioButton_domain.AutoSize = True
+        Me.RadioButton_domain.Location = New System.Drawing.Point(6, 20)
+        Me.RadioButton_domain.Name = "RadioButton_domain"
+        Me.RadioButton_domain.Size = New System.Drawing.Size(71, 16)
+        Me.RadioButton_domain.TabIndex = 5
+        Me.RadioButton_domain.TabStop = True
+        Me.RadioButton_domain.Text = "动态域名"
+        Me.RadioButton_domain.UseVisualStyleBackColor = True
+        '
+        'RadioButton_ip_file
+        '
+        Me.RadioButton_ip_file.AutoSize = True
+        Me.RadioButton_ip_file.Location = New System.Drawing.Point(6, 42)
+        Me.RadioButton_ip_file.Name = "RadioButton_ip_file"
+        Me.RadioButton_ip_file.Size = New System.Drawing.Size(59, 16)
+        Me.RadioButton_ip_file.TabIndex = 6
+        Me.RadioButton_ip_file.TabStop = True
+        Me.RadioButton_ip_file.Text = "IP文件"
+        Me.RadioButton_ip_file.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(247, 204)
+        Me.ClientSize = New System.Drawing.Size(356, 252)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_help)
         Me.Controls.Add(Me.Button_save_or_uninstall)
         Me.Controls.Add(Me.checkbox_modify_conf)
         Me.Controls.Add(Me.textbox_pvpgn_directory)
-        Me.Controls.Add(Me.textbox_bnet_domain_name)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Text = "动态IP PvPGN辅助工具"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents textbox_bnet_domain_name As TextBox
     Friend WithEvents textbox_pvpgn_directory As TextBox
@@ -137,4 +173,8 @@ Partial Class Form1
     Friend WithEvents Button_help As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Timer1 As Timer
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents TextBox_ip_file As TextBox
+    Friend WithEvents RadioButton_ip_file As RadioButton
+    Friend WithEvents RadioButton_domain As RadioButton
 End Class

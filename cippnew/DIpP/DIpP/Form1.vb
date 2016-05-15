@@ -12,7 +12,7 @@
         '获得动态域名ip地址赋值到oldip
         'OldIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
         '测试调用
-        'cipprun() '调试用
+        ' cipprun()
         'modify_conf()
 
     End Sub
@@ -23,7 +23,15 @@
         Else
             My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "pvpgn_directory", textbox_pvpgn_directory.Text)
             My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "bnet_domain_name", textbox_bnet_domain_name.Text)
+            My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "ip_file", TextBox_ip_file.Text)
             My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "modify_conf", checkbox_modify_conf.Checked)
+
+            If RadioButton_ip_file.Checked Then
+                My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "get_ip_method", "ip")
+            Else
+                My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "get_ip_method", "domain")
+            End If
+
         End If
     End Sub
 
@@ -31,9 +39,32 @@
         OldIp = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\D2Server\D2GS\", "d2csip", 0)
         'My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\D2Server\D2GS\", "d2csip", "22222")
         'MsgBox(OldIp)
-        NewIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
+
+        '获取新ip，判断是那种方法
+        If RadioButton_ip_file.Checked Then
+            Dim dFile As New System.Net.WebClient
+            Try
+                NewIp = dFile.DownloadString(TextBox_ip_file.Text)
+            Catch ex As Exception
+
+            End Try
+
+        Else
+            Try
+                NewIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
+            Catch ex As Exception
+
+            End Try
+
+        End If
+        'NewIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
         'MsgBox(NewIp)
-        If NewIp <> OldIp Then
+
+
+
+
+
+        If NewIp <> OldIp And NewIp <> "" Then
             If checkbox_modify_conf.Checked = True Then
                 '修改conf
                 modify_conf（)
@@ -109,22 +140,33 @@
     End Sub
 
     Private Sub chushi()
-        If My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "pvpgn_directory", Nothing) Is Nothing Or My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "bnet_domain_name", Nothing) Is Nothing Or My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "modify_conf", Nothing) Is Nothing Then
+
+        If My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "pvpgn_directory", Nothing) Is Nothing Then
             firstrun = True
         End If
 
         If firstrun Then
             Button_save_or_uninstall.Text = "保存退出"
-            Label3.Text = "首次运行请设置pvpgn目录、动态域名、模式后点保存退出"
-            textbox_pvpgn_directory.Text = "d: \pvpgn"
+            Label3.Text = "首次运行请设置pvpgn目录、动态域名或ip文件、模式后点保存退出"
+            textbox_pvpgn_directory.Text = "d:\pvpgn"
             textbox_bnet_domain_name.Text = "tybh.vicp.net"
+            TextBox_ip_file.Text = "http://code.taobao.org/svn/BHBnet/trunk/ip/ip.txt"
             checkbox_modify_conf.Checked = True
+            RadioButton_ip_file.Checked = True
         Else
             Button_save_or_uninstall.Text = "卸载"
             Label3.Text = "正在运行，需要卸载请点卸载按钮"
             textbox_pvpgn_directory.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "pvpgn_directory", "d:\pvpgndir")
             textbox_bnet_domain_name.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "bnet_domain_name", "tybh.vicp.net")
-            checkbox_modify_conf.Checked  = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "modify_conf", "True") = "True"
+            TextBox_ip_file.Text = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "ip_file", "http://code.taobao.org/svn/BHBnet/trunk/ip/ip.txt")
+            checkbox_modify_conf.Checked = My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "modify_conf", "True") = "True"
+
+            If My.Computer.Registry.GetValue("HKEY_LOCAL_MACHINE\SOFTWARE\cipp\", "get_ip_method", "ip") = "ip" Then
+                RadioButton_ip_file.Checked = True
+            Else
+                RadioButton_domain.Checked = True
+            End If
+
             Timer1.Enabled = True
         End If
     End Sub
@@ -147,10 +189,14 @@
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+
+        Shell("up_ip_com.bat", AppWinStyle.Hide, True)
         cipprun()
     End Sub
 
+    Private Sub Label4_Click(sender As Object, e As EventArgs)
 
+    End Sub
 
     Private Sub modify_conf()
         'Dim bnetd As String, 
