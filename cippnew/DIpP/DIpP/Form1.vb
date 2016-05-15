@@ -12,7 +12,7 @@
         '获得动态域名ip地址赋值到oldip
         'OldIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
         '测试调用
-        cipprun()
+        'cipprun()
         'modify_conf()
 
     End Sub
@@ -166,7 +166,7 @@
             Else
                 RadioButton_domain.Checked = True
             End If
-
+            cipprun()
             Timer1.Enabled = True
         End If
     End Sub
@@ -194,6 +194,10 @@
     End Sub
 
     Private Sub Label4_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
 
     End Sub
 

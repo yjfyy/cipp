@@ -32,9 +32,9 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox_ip_file = New System.Windows.Forms.TextBox()
-        Me.RadioButton_domain = New System.Windows.Forms.RadioButton()
         Me.RadioButton_ip_file = New System.Windows.Forms.RadioButton()
+        Me.RadioButton_domain = New System.Windows.Forms.RadioButton()
+        Me.TextBox_ip_file = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -116,12 +116,16 @@ Partial Class Form1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "获取IP方式"
         '
-        'TextBox_ip_file
+        'RadioButton_ip_file
         '
-        Me.TextBox_ip_file.Location = New System.Drawing.Point(83, 37)
-        Me.TextBox_ip_file.Name = "TextBox_ip_file"
-        Me.TextBox_ip_file.Size = New System.Drawing.Size(245, 21)
-        Me.TextBox_ip_file.TabIndex = 3
+        Me.RadioButton_ip_file.AutoSize = True
+        Me.RadioButton_ip_file.Location = New System.Drawing.Point(6, 42)
+        Me.RadioButton_ip_file.Name = "RadioButton_ip_file"
+        Me.RadioButton_ip_file.Size = New System.Drawing.Size(59, 16)
+        Me.RadioButton_ip_file.TabIndex = 6
+        Me.RadioButton_ip_file.TabStop = True
+        Me.RadioButton_ip_file.Text = "IP文件"
+        Me.RadioButton_ip_file.UseVisualStyleBackColor = True
         '
         'RadioButton_domain
         '
@@ -134,16 +138,12 @@ Partial Class Form1
         Me.RadioButton_domain.Text = "动态域名"
         Me.RadioButton_domain.UseVisualStyleBackColor = True
         '
-        'RadioButton_ip_file
+        'TextBox_ip_file
         '
-        Me.RadioButton_ip_file.AutoSize = True
-        Me.RadioButton_ip_file.Location = New System.Drawing.Point(6, 42)
-        Me.RadioButton_ip_file.Name = "RadioButton_ip_file"
-        Me.RadioButton_ip_file.Size = New System.Drawing.Size(59, 16)
-        Me.RadioButton_ip_file.TabIndex = 6
-        Me.RadioButton_ip_file.TabStop = True
-        Me.RadioButton_ip_file.Text = "IP文件"
-        Me.RadioButton_ip_file.UseVisualStyleBackColor = True
+        Me.TextBox_ip_file.Location = New System.Drawing.Point(83, 37)
+        Me.TextBox_ip_file.Name = "TextBox_ip_file"
+        Me.TextBox_ip_file.Size = New System.Drawing.Size(245, 21)
+        Me.TextBox_ip_file.TabIndex = 3
         '
         'Form1
         '
