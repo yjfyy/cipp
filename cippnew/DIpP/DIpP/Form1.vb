@@ -49,6 +49,7 @@
             Catch ex As Exception
 
             End Try
+        Else
 
             Try
                 NewIp = System.Net.Dns.GetHostEntry(textbox_bnet_domain_name.Text).AddressList(0).ToString
